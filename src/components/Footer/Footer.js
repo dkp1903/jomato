@@ -1,8 +1,9 @@
 const Footer = () => {
     return (
         <div>
-            Footer
-            </div>
+            <span>&#169; DKP</span>
+
+        </div>
     )
 }
 

@@ -1,0 +1,76 @@
+{
+    "restaurants": [
+        {
+            "id": 1, 
+            "name": "R1",
+            "image": "https://picsum.photos/200/300",
+            "rating": 3,
+            "cost": 150,
+            "specialities": "North Indian, South Indian, Middle Indian, Other Indian"
+        },
+        {
+            "id": 6, 
+            "name": "D1",
+            "image": "https://picsum.photos/200/300",
+            "rating": 1,
+            "cost": 150,
+            "specialities": "North Indian, South Indian, Middle Indian, Other Indian"
+        },
+        {
+            "id": 2, 
+            "name": "A1",
+            "image": "https://picsum.photos/200/300",
+            "rating": 4,
+            "cost": 150,
+            "specialities": "North Indian, South Indian, Middle Indian, Other Indian"
+        },
+        {
+            "id": 3, 
+            "name": "B1",
+            "image": "https://picsum.photos/200/300",
+            "rating": 2,
+            "cost": 150,
+            "specialities": "North Indian, South Indian, Middle Indian, Other Indian"
+        },
+        {
+            "id": 19, 
+            "name": "C1",
+            "image": "https://picsum.photos/200/300",
+            "rating": 5,
+            "cost": 150,
+            "specialities": "North Indian, South Indian, Middle Indian, Other Indian"
+        },
+        {
+            "id": 7, 
+            "name": "R1",
+            "image": "https://picsum.photos/200/300",
+            "rating": 3,
+            "cost": 150,
+            "specialities": "North Indian, South Indian, Middle Indian, Other Indian"
+        },
+        {
+            "id": 8, 
+            "name": "R1",
+            "image": "https://picsum.photos/200/300",
+            "rating": 3,
+            "cost": 150,
+            "specialities": "North Indian, South Indian, Middle Indian, Other Indian"
+        },
+        {
+            "id": 9, 
+            "name": "R1",
+            "image": "https://picsum.photos/200/300",
+            "rating": 3,
+            "cost": 150,
+            "specialities": "North Indian, South Indian, Middle Indian, Other Indian"
+        },
+        {
+            "id": 10, 
+            "name": "R1",
+            "image": "https://picsum.photos/200/300",
+            "rating": 3,
+            "cost": 150,
+            "specialities": "North Indian, South Indian, Middle Indian, Other Indian"
+        }
+    ]
+}

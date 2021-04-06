@@ -1,0 +1,58 @@
+
+.restaurant {
+    margin: 1em 2em;
+    overflow: hidden;
+ 
+    transition: width 2s;
+  }
+  .restaurant:hover {
+    width: 300px;
+  }
+  .restaurant .ant-card-body {
+    padding: 0;
+    width: 100%;
+  }
+  
+  .restaurant.ant-card-hoverable:hover {
+    border-color: #454545;
+  }
+  
+  .restaurant-image {
+    height: 250px;
+    width: 100%;
+  }
+  .restaurant-image img {
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .restaurant-info {
+    width: 100%;
+    text-align: left;
+  }
+  
+  .restaurant-info-text,
+  .restaurant-info-utility {
+    padding: 1em 1em;
+  }
+  
+  .restaurant-title {
+    font-size: 1.3em;
+  }
+  
+  .restaurant-cost {
+    font-size: 1.5em;
+  }
+  
+  .restaurant-rating {
+    font-size: 1em;
+    margin-bottom: 2em;
+  }
+  
+  .restaurant-category {
+    color: #909090;
+  }
+  
