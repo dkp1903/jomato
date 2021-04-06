@@ -14,6 +14,9 @@ const Restaurant = (props) => {
                     <div className="restaurant-cost">
                         {`${props.restaurant.cost} for 1 person`}
                     </div>
+                    <div className="restaurant-cost">
+                        {`${props.restaurant.specialities}`}
+                    </div>
                 </div>
                 <div className="restaurant-info-utility">
                     <div>

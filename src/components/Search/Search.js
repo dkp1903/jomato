@@ -54,14 +54,9 @@ const Search = () => {
 
     const getRestaurants = async () => {
         const response = await performAPICall()
-        console.log('rere', response)
         if(response) {
-            
             setRestaurants(response.data)
-            
             setFiltered(response.data)
-            console.log(restaurants.length)
-            
         }
     }
 
@@ -88,13 +83,31 @@ const Search = () => {
         debounceTimeout = setTimeout(() => search(value), 300)
     }
 
-    const sortByName = () => {
-        setFiltered(restaurants.sort((a, b) => {
+    const sortByName = async () => {
+        //const response = await performAPICall()
+        
+        console.log('len', restaurants.length)
+        filteredRestaurants.sort((a, b) => {
+            
             if (a.name.toUpperCase() > b.name.toUpperCase())
                 return -1
             return 1
+            })
+        setFiltered(filteredRestaurants)
+        console.log(filteredRestaurants)
+        //filteredRestaurants.map(restaurant => getRestaurantElement(restaurant))
+        
+        
+        
+    }
+    const sortByRating = async() => {
+        await performAPICall()
+        setFiltered(filteredRestaurants.sort((a, b) => {
+            if (a.rating > b.rating)
+                return -1
+            return 1
             }))
-        console.log('After sort> ', restaurants)
+       
         
     }
 
@@ -124,12 +137,13 @@ const Search = () => {
                 />
             <div className="sort-button">
                 <Button type="primary"onClick={sortByName}>Sort by name</Button>
+                <Button type="primary"onClick={sortByRating}>Sort by Rating</Button>
             </div>
            
             <Row>
                 <Col
                     xs={{span: 24}}
-                    md={{ span: restaurants.length ? 18: 24}}
+                    md={{ span: restaurants.length ? 30: 30}}
 
                 >
                 <div className="search-container">

@@ -2,7 +2,7 @@
 .restaurant {
     margin: 1em 2em;
     overflow: hidden;
- 
+    border-radius: 10px;
     transition: width 2s;
   }
   .restaurant:hover {
@@ -44,7 +44,7 @@
   }
   
   .restaurant-cost {
-    font-size: 1.5em;
+    font-size: 1em;
   }
   
   .restaurant-rating {
