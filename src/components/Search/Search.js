@@ -71,8 +71,8 @@ const Search = () => {
         const newRes = filteredRestaurants.filter(
             restaurant => restaurant.name.toUpperCase().includes(text.toUpperCase())
         )
-        console.log("Newres", newRes)
         setFiltered(newRes)
+
     }
 
     const debounceSearch = ( event ) => {
@@ -83,42 +83,32 @@ const Search = () => {
         debounceTimeout = setTimeout(() => search(value), 300)
     }
 
-    const sortByName = async () => {
-        //const response = await performAPICall()
+    const sortByName =  () => {
         
-        console.log('len', restaurants.length)
         filteredRestaurants.sort((a, b) => {
             
             if (a.name.toUpperCase() > b.name.toUpperCase())
                 return -1
             return 1
             })
-        setFiltered(filteredRestaurants)
-        console.log('D', filteredRestaurants)
+       
         search('')
-        //filteredRestaurants.map(restaurant => getRestaurantElement(restaurant))
-        
-        
         
     }
-    const sortByRating = async() => {
-        //await performAPICall()
+    const sortByRating = () => {
         
-        
-        filteredRestaurants.sort((a, b) => {
-            if (a.rating > b.rating)
+       filteredRestaurants.sort((a, b) => {
+            if (a.rating > b.rating) 
                 return -1
             return 1
             })
-        setFiltered(filteredRestaurants)
-        console.log('R', filteredRestaurants)
         search('')
        
-        
     }
 
+   
+
     const getRestaurantElement = ( restaurant ) => {
-        console.log('Get res element')
         return (
             <Col 
                 xs={24} 
@@ -131,8 +121,8 @@ const Search = () => {
             </Col>
         )
     }
-
     return (
+       
        <>
             
                 <Input.Search 
@@ -141,9 +131,10 @@ const Search = () => {
                     onChange={debounceSearch}
                     enterButton={true}
                 />
-            <div className="sort-button">
-                <Button type="primary"onClick={sortByName}>Sort by name</Button>
-                <Button type="primary"onClick={sortByRating}>Sort by Rating</Button>
+            <div className="sort-buttons-div">
+                <Button className="sort-button-single" onClick={sortByName}>Sort by name</Button>
+                <Button className="sort-button-single" onClick={sortByRating}>Sort by Rating</Button>
+                <Button className="sort-button-single" onClick={getRestaurants}>Refresh</Button>
             </div>
            
             <Row>
@@ -161,7 +152,7 @@ const Search = () => {
                             )
 
                         ) : loading ? (
-                            <div className="loading-text"><Button type="primary" loading>Loading</Button> </div>
+                            <div className="loading-text"><Button loading>Loading</Button> </div>
                             
                         ) : <div className="loading-text">Nothing to show </div>
                         }  

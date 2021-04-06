@@ -10,8 +10,12 @@
   margin-top: 70px;
   padding: 1.5em 0em;
 }
-.sort-button {
+.sort-buttons-div {
     margin-top: 2%;
+    
+}
+.sort-button-single {
+  margin-right: 2%;
 }
 /* Set width for the search bar */
 span.ant-input-search {
