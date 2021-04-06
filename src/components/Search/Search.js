@@ -68,7 +68,7 @@ const Search = () => {
 
     const search = (text) => {
         console.log('Went into search')
-        const newRes = restaurants.filter(
+        const newRes = filteredRestaurants.filter(
             restaurant => restaurant.name.toUpperCase().includes(text.toUpperCase())
         )
         console.log("Newres", newRes)
@@ -94,19 +94,25 @@ const Search = () => {
             return 1
             })
         setFiltered(filteredRestaurants)
-        console.log(filteredRestaurants)
+        console.log('D', filteredRestaurants)
+        search('')
         //filteredRestaurants.map(restaurant => getRestaurantElement(restaurant))
         
         
         
     }
     const sortByRating = async() => {
-        await performAPICall()
-        setFiltered(filteredRestaurants.sort((a, b) => {
+        //await performAPICall()
+        
+        
+        filteredRestaurants.sort((a, b) => {
             if (a.rating > b.rating)
                 return -1
             return 1
-            }))
+            })
+        setFiltered(filteredRestaurants)
+        console.log('R', filteredRestaurants)
+        search('')
        
         
     }
